@@ -9,7 +9,7 @@ import GlowingBackdrop from '@/components/Common/GlowingBackdrop';
 import BaseLayout from '@/layouts/Base';
 import CenteredLayout from '@/layouts/Centered';
 
-const GlobalErrorPage: FC<{ error: Error }> = ({ error }) => {
+const GlobalErrorPage: FC<{ error: Err }> = ({ error }) => {
   captureException(error);
 
   return (
@@ -17,7 +17,7 @@ const GlobalErrorPage: FC<{ error: Error }> = ({ error }) => {
       <body>
         <BaseLayout>
           <CenteredLayout>
-            <GlowingBackdrop />
+            <GlowingBackdrop 
 
             <main>
               500
@@ -25,7 +25,7 @@ const GlobalErrorPage: FC<{ error: Error }> = ({ error }) => {
               <p className="-mt-4 max-w-sm text-center text-lg">
                 This page has thrown a non-recoverable error.
               </p>
-              <Button href="/">
+              <Button href"/">
                 Back to Home
                 <ArrowRightIcon />
               </Button>
